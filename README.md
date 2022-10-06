@@ -31,3 +31,7 @@ The port can be configured with the PORT environment variable. It defaults to 30
 ### `npm run clean`
 
 Delete `build/`.
+
+## Acknowledgements
+
+Modified from [Collabs's rich text demo](https://compoventuals-tests.herokuapp.com/web_socket.html?container=demos/rich-text/dist/rich_text.html) by Benito Geordie.

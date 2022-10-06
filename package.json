@@ -1,4 +1,6 @@
 {
+  "author": "Matthew Weidner",
+  "description": "Collaborative rich text editor built on top of Firebase RTDB",
   "license": "Apache 2.0",
   "dependencies": {
     "@types/quill": "^2.0.9",
