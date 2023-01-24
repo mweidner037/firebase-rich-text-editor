@@ -1,19 +1,20 @@
 // Import the functions you need from the SDKs you need
 import { FirebaseOptions, initializeApp } from "firebase/app";
+import { getAuth, signInAnonymously } from "firebase/auth";
 import {
-  getDatabase,
-  query,
-  ref,
-  orderByChild,
-  set,
-  remove,
-  push,
+  DataSnapshot,
   get,
-  update,
+  getDatabase,
   onChildAdded,
   onChildChanged,
   onChildRemoved,
-  DataSnapshot,
+  orderByChild,
+  push,
+  query,
+  ref,
+  remove,
+  set,
+  update,
 } from "firebase/database";
 import Quill, { DeltaOperation } from "quill";
 import { Position, PositionSource } from "./position_source";
@@ -118,6 +119,8 @@ interface DBType {
   }
   const firebaseConfig = <FirebaseOptions>JSON.parse(configEnv);
   const app = initializeApp(firebaseConfig);
+  await signInAnonymously(getAuth(app));
+
   const db = getDatabase(app);
   const textRef = ref(db, "text/");
 
